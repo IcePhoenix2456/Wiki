@@ -1,71 +1,74 @@
-# Launching CFW
+# Запуск CFW
 
-Now that the preparation work is out of the way, we're finally ready to launch custom firmware on the Switch.
+Теперь, когда подготовительные работы завершены, мы наконец готовы запустить кастомную прошивку на консоли.
 
-Unlike systems such as the DSi, Wii, or 3DS, Switch CFW is currently volatile. It will only work as long as your Switch is on. As soon as your Switch completely loses power for any reason (shutting down, battery dying, etc.), CFW will no longer be active and you will need to follow these instructions again.
+В отличие от таких систем, как DSi, Wii или 3DS, CFW на Switch в настоящее время является временной. Она будет работать только до тех пор, пока ваша консоль включена. Как только Switch полностью потеряет питание по какой-либо причине (выключение, разрядка батареи и т. д.), CFW больше не будет активна, и вам нужно будет снова выполнить эти инструкции.
 
-!!! danger "Keep emuMMC offline at all times"
-    Your emuMMC (emuNAND) should never connect to Nintendo. For online play, eShop browsing, or any other Nintendo online activity, use your sysNAND. Using both emuMMC and sysNAND online will likely result in a ban.
+!!! danger "Держите emuMMC всегда оффлайн"
+    Ваш emuMMC (emuNAND) не должен подключаться к Nintendo. Для онлайн-игры, просмотра eShop или других онлайн-активностей от Nintendo используйте ваш sysNAND. Использование как emuMMC, так и sysNAND онлайн может привести к бану.
 
-=== "Instructions for emuMMC"
 
-    #### Instructions:
+=== "Инструкции для emuMMC"
 
-    1. From Hekate's `Home` menu, navigate to the `Launch` menu.
-    2. Find `Atmosphere FSS0 emuMMC` and launch it.
+    #### Инструкции:
 
-    Hekate is now booting into your emuMMC. To verify that your emuMMC launched properly, open System Settings and navigate to System. You should see `AMS` next to the version number (`AMS` indicating that you're booted into Atmosphere), as well as an `E` at the end (indicating you are booted into emuMMC).
+    1. В меню `Home` Hekate перейдите в меню `Launch`.
+    2. Найдите `Atmosphere FSS0 emuMMC` и запустите его.
+
+    Hekate теперь загружает ваш emuMMC. Чтобы убедиться, что ваш emuMMC загрузился правильно, откройте Системные настройки и перейдите в раздел "Система". Вы должны увидеть `AMS` рядом с номером версии (что означает, что вы загрузились в Atmosphere), а также `E` в конце (что указывает на то, что вы загрузились в emuMMC).
 
     !!! note ""
-        If you wish to set up an extra method of blocking Nintendo's servers on your emuMMC, visit [this page](../../extras/blocking_nintendo.md#instructions-90dns) to set up 90DNS.
+        Если вы хотите настроить дополнительный метод блокировки серверов Nintendo на вашем emuMMC, посетите [эту страницу](../../extras/blocking_nintendo.md#instructions-90dns), чтобы настроить 90DNS.
 
-    ![Atmosphere version string](img/launching_cfw_atmosphere_version_string2.jpg)
-
-=== "Instructions for sysCFW"
-
-    #### Instructions:
-
-    1. From Hekate's `Home` menu, navigate to the `Launch` menu.
-    2. Find `Atmosphere FSS0 sysMMC` and launch it.
-
-    Hekate is now booting into sysCFW. To verify that sysCFW launched properly, open System Settings and navigate to System. You should see `AMS` next to the version number (`AMS` indicating that you're booted into Atmosphere), as well as an `S` at the end (indicating you are booted into sysCFW).
-
-    - **Note:** You will also have the `Atmosphere FSS0 EmuMMC` launch option in Hekate, launching it will just result in an error and is expected because you don't have an emuMMC.
-
-    ![Atmosphere version string](img/launching_cfw_atmosphere_version_string3.jpg)
-
-!!! tip "Rebooting to Hekate"
-    Once booted into CFW, you can easily get back to Hekate by holding the power button, and selecting `Restart` in the power menu or by using the "reboot to payload" homebrew app in the homebrew menu. (Note that while the Reboot to Payload *app* app does *not* work on modchipped Switch consoles, those already automatically run payloads upon reboot in the first place by default.)
-
------
-
-### **Launching the Homebrew Menu**
-
-You will now be able to launch the Homebrew Menu by opening the album or by holding the R button while launching any game (including demos/cartridges), or application (e.g. YouTube/Hulu). If R is not held, the game or application will launch like normal.
-
-!!! warning "A note about using the album for the Homebrew Menu"
-    - Using Album for the Homebrew Menu instead of a game or application has several limitations, including but not limited to: a smaller amount of available memory (RAM), as well as being unable to launch a full-featured web browser. It is strongly recommended to launch homebrew through applications or games instead.
+    ![Версия Atmosphere](img/launching_cfw_atmosphere_version_string2.jpg)
 
 
-### **About the included Homebrew apps**
+=== "Инструкции для sysMMC"
 
-See the [Homebrew](../../homebrew/index.md) tab for information about what the included Homebrew apps do and if you want to check out more Homebrew apps and read about sysmodules like MissionControl, ldn_mitm, sys-con and more.
+    #### Инструкции:
 
-If you wish to install more homebrew apps, place them (`.nro` files) in the `switch` folder on your microSD card.
+    1. В меню `Home` Hekate перейдите в меню `Launch`.
+    2. Найдите `Atmosphere FSS0 sysMMC` и запустите его.
+
+    Hekate теперь загружает sysCFW. Чтобы убедиться, что sysCFW загрузился правильно, откройте Системные настройки и перейдите в раздел "Система". Вы должны увидеть `AMS` рядом с номером версии (что означает, что вы загрузились в Atmosphere), а также `S` в конце (что указывает на то, что вы загрузились в sysCFW).
+
+    - **Примечание:** Вы также увидите опцию запуска `Atmosphere FSS0 EmuMMC` в Hekate. Запуск этой опции приведет к ошибке, что ожидаемо, так как у вас нет emuMMC.
+
+    ![Версия Atmosphere](img/launching_cfw_atmosphere_version_string3.jpg)
+
+
+!!! tip "Перезагрузка в Hekate"
+    После загрузки в CFW, вы можете легко вернуться в Hekate, удерживая кнопку питания и выбрав `Перезагрузить` в меню питания или используя приложение "reboot to payload" из меню homebrew. (Обратите внимание, что приложение Reboot to Payload *не работает* на консолях с модчипом, так как они по умолчанию автоматически запускают payload при перезагрузке.)
 
 -----
 
-### **Installing Android/Linux**
+### **Запуск меню Homebrew**
 
-If you've partitioned your microSD card for preparation of Android/Linux earlier, you can continue with the installation of Android/Linux here with the guides below:
+Теперь вы можете запустить Homebrew меню, открыв альбом или удерживая кнопку R при запуске любой игры (включая демо/картриджи) или приложения (например, YouTube/Hulu). Если R не удерживать, игра или приложение запустится как обычно.
 
-[Android installation guide :material-arrow-right:](../../extras/installing_android.md){ .md-button .md-button--primary } [Linux installation guide :material-arrow-right:](../../extras/installing_linux.md){ .md-button .md-button--primary }
+!!! warning "Заметке об использовании альбома для меню Homebrew"
+    - Использование Альбома для меню Homebrew вместо игры или приложения имеет несколько ограничений, включая, но не ограничиваясь: меньшее количество доступной памяти (RAM) и невозможность запуска полноценного веб-браузера. Рекомендуется запускать homebrew через приложения или игры.
 
-??? "Frequently Asked Questions about this page"
-      - **Q: How can you verify that sysCFW / emuMMC launched properly?** <br>
-          A: Once you boot into the Switch's HOME Menu, navigate to Settings > System. The system version should be prefixed with an S or E, standing for SysMMC or EmuMMC respectively. Seeing either of these confirms which environment you are using.
-      - **Q: What options do you have for rebooting to Hekate while booted into CFW?** <br>
-          A: If you use a modchip, your console will automatically boot into whatever payload that your modchip would normally boot into via a coldboot, after clicking the restart button in the power-off menu. This can be any payload, but ideally is Hekate.
-          If you use no modchip (and you're using a V1 console), your console will "reboot-to-payload" by default, triggering whatever fusee payload is located in `atmosphere/reboot_to_payload.bin`. This can be any payload, but ideally is Hekate.
-      - **Q: Where can I find additional homebrew apps?** <br>
-          A: One of the more convenient sources is the (Homebrew App Store)[https://github.com/fortheusers/hb-appstore/releases], hosted by (4TU)[https://gitlab.com/4TU]. You can also browse the (r/SwitchHacks)[https://www.reddit.com/r/SwitchHacks/] subreddit.
+### **О доступных приложениях Homebrew**
+
+См. вкладку [Homebrew](../../homebrew/index.md) для информации о том, что делают установленные Homebrew приложения, а также если вы хотите узнать больше о Homebrew приложениях и прочитать о системных модулях, таких как MissionControl, ldn_mitm, sys-con и других.
+
+Если вы хотите установить больше Homebrew приложений, поместите их (.nro файлы) в папку `switch` на вашей microSD карте.
+
+-----
+
+### **Установка Android/Linux**
+
+Если вы ранее разделили свою microSD карту для установки Android/Linux, вы можете продолжить установку Android/Linux по следующим руководствам:
+
+[Руководство по установке Android :material-arrow-right:](../../extras/installing_android.md){ .md-button .md-button--primary } [Руководство по установке Linux :material-arrow-right:](../../extras/installing_linux.md){ .md-button .md-button--primary }
+
+??? "Часто задаваемые вопросы по этой странице"
+      - **В: Как можно проверить, что sysCFW / emuMMC загрузились правильно?** <br>
+          О: После загрузки в главное меню Switch, перейдите в Настройки > Система. Версия системы должна начинаться с S или E, что означает SysMMC или EmuMMC соответственно. Видя любое из этих значений, можно подтвердить, в какой среде вы находитесь.
+      - **В: Какие есть опции для перезагрузки в Hekate, находясь в CFW?** <br>
+          О: Если у вас есть модчип, ваша консоль будет автоматически загружаться в payload, который обычно запускает ваш модчип при холодной загрузке, после нажатия кнопки перезагрузки в меню выключения. Это может быть любой payload, но желательно Hekate.
+          Если у вас нет модчипа (и вы используете rev1), ваша консоль будет по умолчанию "перезагружаться в payload", запуская любой payload, находящийся в `atmosphere/reboot_to_payload.bin`. Это может быть любой payload, но желательно Hekate.
+      - **В: Где я могу найти дополнительные приложения Homebrew?** <br>
+          О: Одним из более удобных источников является (Homebrew App Store)[https://github.com/fortheusers/hb-appstore/releases], размещённый на (4TU)[https://gitlab.com/4TU]. Также вы можете просмотреть сабреддит (r/SwitchHacks)[https://www.reddit.com/r/SwitchHacks/].
+
