@@ -1,49 +1,51 @@
-# **microSD Card preparations**
+# **Подготовка SD карты**
 
-### **Information**
+### **Информация**
 
-We will now place the required files for the Atmosphère custom firmware and some additional homebrew files on the microSD card.
+Теперь мы разместим необходимые файлы для кастомной прошивки Atmosphère и некоторые дополнительные файлы homebrew на microSD карте.
 
-Atmosphere has its own bootloader, called fusee. For the purposes of this guide we will be using Hekate instead, so that we can back up the system's NAND (internal storage) and take advantage of other advanced features in the future.
+Atmosphère имеет свой собственный загрузчик, называемый fusee. В рамках этого руководства мы будем использовать Hekate, чтобы иметь возможность создать резервную копию NAND (внутреннего хранилища системы) и использовать другие расширенные функции в будущем.
 
-!!! warning "File name extensions"
-    If you use Windows, you should enable file name extensions before continuing. See [this link](../../extras/showing_file_extensions.md) for a guide on how to do this.
+!!! warning "Расширения имен файлов"
+    Если вы используете Windows, вам нужно включить отображение расширений имен файлов перед продолжением. Для этого можно воспользоваться [этим руководством](../../extras/showing_file_extensions.md).
+
 
 -----
 
-#### **What you need:**
-- The latest release of <a href="https://github.com/CTCaer/Hekate/releases/" target="_blank">Hekate</a> (Download the `hekate_ctcaer_(version).zip` release of hekate)
-- The Hekate config file: <a href="../../../files/emu/hekate_ipl.ini" download>hekate_ipl.ini</a>
-- The DNS.MITM DNS redirection config: <a href="../../../files/emummc.txt" download>emummc.txt</a>
-- The bootlogo zip folder: <a href="../../../files/bootlogos.zip" download>bootlogos.zip</a>
-- The latest release of <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank">Atmosphere</a>. Download the `atmosphere-(version)-master-(version)+hbl-(version)+hbmenu-(version).zip` release of Atmosphere.
-- The latest release of <a href="https://github.com/J-D-K/JKSV/releases" target="_blank">JKSV</a> (Download the `JKSV.nro` release of JKSV)
-- The latest release of <a href="https://github.com/mtheall/ftpd/releases" target="_blank">FTPD</a> (Download the `ftpd.nro` release of FTPD)
-- The latest release of <a href="https://github.com/exelix11/SwitchThemeInjector/releases" target="_blank">NXThemesInstaller</a> (Download the `NXThemesInstaller.nro` release of NXThemesInstaller)
-- The latest release of <a href="https://github.com/joel16/NX-Shell/releases" target="_blank">NX-Shell</a> (Download the `NX-Shell.nro` release of nx-shell)
-- The latest release of <a href="https://github.com/XorTroll/Goldleaf/releases" target="_blank">Goldleaf</a> (Download the `Goldleaf.nro` release of Goldleaf)
+#### **Что вам нужно:**
+- Последняя версия <a href="https://github.com/CTCaer/Hekate/releases/" target="_blank">Hekate</a> (Скачайте релиз `hekate_ctcaer_(версия).zip`)
+- Конфигурационный файл Hekate: <a href="../../../files/emu/hekate_ipl.ini" download>hekate_ipl.ini</a>
+- Конфигурация DNS.MITM для перенаправления DNS: <a href="../../../files/emummc.txt" download>emummc.txt</a>
+- Папка с bootlogo в формате zip: <a href="../../../files/bootlogos.zip" download>bootlogos.zip</a>
+- Последняя версия <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank">Atmosphere</a>. Скачайте релиз `atmosphere-(версия)-master-(версия)+hbl-(версия)+hbmenu-(версия).zip`
+- Последняя версия <a href="https://github.com/J-D-K/JKSV/releases" target="_blank">JKSV</a> (Скачайте релиз `JKSV.nro`)
+- Последняя версия <a href="https://github.com/mtheall/ftpd/releases" target="_blank">FTPD</a> (Скачайте релиз `ftpd.nro`)
+- Последняя версия <a href="https://github.com/exelix11/SwitchThemeInjector/releases" target="_blank">NXThemesInstaller</a> (Скачайте релиз `NXThemesInstaller.nro`)
+- Последняя версия <a href="https://github.com/joel16/NX-Shell/releases" target="_blank">NX-Shell</a> (Скачайте релиз `NX-Shell.nro`)
+- Последняя версия <a href="https://github.com/XorTroll/Goldleaf/releases" target="_blank">Goldleaf</a> (Скачайте релиз `Goldleaf.nro`)
 
-#### **Instructions:**
-1. Navigate to the accessible drive.
-2. Copy *the contents of* the Atmosphère`.zip` file to the root of your microSD card.
-3. Copy the `bootloader` folder from the Hekate `.zip` file to the root of your microSD card.
-    - If you're asked to replace files or merge folders, do so.
-4. Copy the `bootloader` folder from the `bootlogos.zip` file to the root of your microSD card.
-    - If you're asked to merge the bootloader folders, do so.
-5. Copy `hekate_ipl.ini` to the `bootloader` folder on your microSD card.
-    - If you're asked to replace the file, do so.
-6. Create a folder named `hosts` inside the `atmosphere` folder on your microSD card, and put `emummc.txt` inside of the `hosts` folder.
-7. Copy `JKSV.nro`, `ftpd.nro`, `NxThemesInstaller.nro`, `NX-Shell.nro` and `Goldleaf.nro` to the `switch` folder on your microSD card.
-8. If you were already using your microSD card as a storage device for your games and backed up the Nintendo folder before partitioning your microSD card, please place it back on the root of your microSD card now.
-    - If you created an emuMMC on the previous page, don't forget to copy the Nintendo folder to `sd:/emuMMC/RAW1/`!
 
-    !!! danger "About emummc.txt"
-        Putting the `emummc.txt` file provided by this guide into `/atmosphere/hosts` will prevent your emuMMC (emuNAND) from connecting to Nintendo. Not doing this will likely result in a ban.
+#### **Инструкции:**
+1. Перейдите на доступный диск.
+2. Скопируйте *содержимое* архива Atmosphère`.zip` в корень вашей microSD карты.
+3. Скопируйте папку `bootloader` из архива Hekate `.zip` в корень вашей microSD карты.
+    - Если вас попросят заменить файлы или объединить папки, согласитесь.
+4. Скопируйте папку `bootloader` из архива `bootlogos.zip` в корень вашей microSD карты.
+    - Если вас попросят объединить папки bootloader, согласитесь.
+5. Скопируйте файл `hekate_ipl.ini` в папку `bootloader` на вашей microSD карте.
+    - Если вас попросят заменить файл, согласитесь.
+6. Создайте папку с именем `hosts` внутри папки `atmosphere` на вашей microSD карте и поместите в нее файл `emummc.txt`.
+7. Скопируйте файлы `JKSV.nro`, `ftpd.nro`, `NxThemesInstaller.nro`, `NX-Shell.nro` и `Goldleaf.nro` в папку `switch` на вашей microSD карте.
+8. Если вы уже использовали свою microSD карту для хранения игр и сделали резервную копию папки Nintendo перед разделением карты, верните её в корень microSD карты.
+    - Если вы создали emuMMC на предыдущей странице, не забудьте скопировать папку Nintendo в `sd:/emuMMC/RAW1/`!
 
-    !!! tip ""    
-        Your microSD card should look similar to the image below. The `Nintendo` folder will not be present if your Switch has not already booted with the microSD card inserted and the `emuMMC` folder will not be present if you're following the sysCFW path of the guide/you haven't created an emuMMC!
-        `payload.bin` will not be present if you're using an unpatched Switch.
+!!! danger "О файле emummc.txt"
+    Помещение файла `emummc.txt`, предоставленного в этом руководстве, в папку `/atmosphere/hosts` предотвратит подключение вашего emuMMC (emuNAND) к сети Nintendo. Несоблюдение этого может привести к бану.
 
-        ![sdfilesimg](img/sdfiles3.png)
+!!! tip ""    
+    Ваша microSD карта должна выглядеть как на изображении ниже. Папка `Nintendo` не будет присутствовать, если ваш Switch еще не был загружен с microSD картой, а папка `emuMMC` не будет присутствовать, если вы следуете пути sysCFW в этом руководстве/если вы не создавали emuMMC!
+    Файл `payload.bin` не будет присутствовать, если вы используете не уязвимый Switch.
 
-[Continue to Making Essential Backups :material-arrow-right:](making_essential_backups.md){ .md-button .md-button--primary }
+    ![sdfilesimg](img/sdfiles3.png)
+
+[Перейти к созданию бэкапа :material-arrow-right:](making_essential_backups.md){ .md-button .md-button--primary }
