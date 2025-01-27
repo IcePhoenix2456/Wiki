@@ -1,27 +1,28 @@
-# Formatting and/or partitioning the microSD Card
+# Форматирование и/или разделение microSD карты
 
-### **What you need:**
+### **Что вам нужно:**
 
-- Your Switch loaded into Hekate
+- Ваша консоль, загруженная в Hekate
 
-!!! danger "Partitioning *WILL* wipe all data on your microSD card!"
-    In case you missed the warning earlier, your microSD card will be wiped during this page. Go to `Tools` > `USB Tools` > `SD Card`, plug your switch into your PC via USB and back up the contents of your microSD card to your PC if you haven't done so yet. If you don't mind redownloading all the games stored on the microSD card and/or all other (potentially important) files getting deleted, you may skip this.
+!!! danger "Разделение *удалит* все данные на вашей microSD карте!"
+    Если вы не обратили внимание на предостережение ранее, то при разделении microSD карта будет стерта. Hekate восстановит файлы, если их общий размер меньше гигабайта. Если размер файлов больше гигабайта, перейдите в `Tools` > `USB tools` > `SD Card`, подключите Switch к ПК через USB и сделайте резервную копию содержимого microSD карты на ПК, если вы еще не сделали это. Если вы не против скачать заново все игры и/или потерять другие (возможно важные) файлы, можете пропустить этот шаг.
 
-### **Instructions:**
+### **Инструкция:**
 
-1. Navigate to `Tools` > `Partition SD card`
-2. Navigate to `Next Step` at the bottom right, then select `Start` in the menu that appears.
-    - If you wish to install Android and/or Linux later, partition your microSD card here accordingly by moving the sliders you see during this step. We recommend setting the `Android (USER)` and `Linux (EXT4)` sliders to at least 16GB.
-    - For Android; Select `Legacy` partitioning for Android 10/11 and `Dynamic` partitioning for Android 13+. Legacy and Dynamic partitioning are **NOT** intercompatible.
-3. Once done, go to Hekate's `Home` menu and then `Tools` > `USB Tools` > `SD Card` and plug your Switch into your PC via USB.
-4. Continue with the next step of the guide.
-    - Your microSD card should now be accessible on your PC. If not, consult the warning message below.
+1. Перейдите в `Tools` > `Partition SD Card`.
+2. Перейдите к `Next Step` в нижней части справа, затем выберите `Start` в появившемся меню.
+    - Если вы планируете устанавливать Android и/или Linux позже, разделите microSD карту соответствующим образом, двигая ползунки, которые вы видите в этом шаге. Мы рекомендуем установить ползунки `Android (USER)` и `Linux (EXT4)` минимум на 16 ГБ.
+    - Для Android выберите `Legacy` для Android 10/11 и `Dynamic` для Android 13+. Legacy и Dynamic разделение **не совместимы** между собой.
+3. После завершения вернитесь в главное меню Hekate, затем выберите `Tools` > `USB Tools` > `SD Card` и подключите Switch к ПК через USB.
+4. Продолжите следующий шаг в руководстве.
+    - Ваша microSD карта теперь должна быть доступна на вашем ПК. Если нет, смотрите примечание ниже.
 
-!!! warning "Your microSD card is not showing up"
-    If your microSD card isn't showing up at all, ensure that you're using a USB cable capable of data transfer and that if you use Windows, Windows has assigned a drive letter to the FAT32 partition of your microSD card. If you still experience errors, join the <a href="https://discord.gg/C29hYvh" target="_blank">NH-Discord server</a> for support.
+!!! warning "Ваша microSD карта не отображается"
+    Если ваша microSD карта не отображается вообще, убедитесь, что вы используете USB кабель, способный передавать данные, и что в Windows назначена буква диска для раздела FAT32 вашей microSD карты. Если ошибка сохраняется, присоединяйтесь к <a href="https://t.me/UltraNX" target="_blank">группе Ultra-NX в Telegram</a> для получения помощи.
 
 ![hekate-partitioning-emu](img/hekate-partitioning-sys.png)
 
 &nbsp;
 
-[Continue to SD Preparations :material-arrow-right:](sd_preparation.md){ .md-button .md-button--primary }
+[Перейти к подготовке SD :material-arrow-right:](sd_preparation.md){ .md-button .md-button--primary }
+
