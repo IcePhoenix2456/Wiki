@@ -1,33 +1,32 @@
-# Partitioning the microSD Card and creating the emuMMC
+# Разделение microSD карты и создание emuMMC
 
-### **What you need:**
+### **Что вам нужно:**
 
-- Your Switch loaded into Hekate
+- Ваша консоль, загруженная в Hekate
 
-!!! danger "Partitioning *WILL* wipe all data on your microSD card!"
-    In case you missed the warning earlier, your microSD card will be wiped during this page. Go to `Tools` > `USB Tools` > `SD Card`, plug your switch into your PC via USB and back up the contents of your microSD card to your PC if you haven't done so yet. If you don't mind redownloading all the games stored on the microSD card and/or all other (potentially important) files getting deleted, you may skip this.
+!!! danger "Разделение *удалит* все данные на вашей microSD карте!"
+    Если вы не обратили внимание на предостережение ранее, то при разделении microSD карта будет стерта. Hekate восстановит файлы, если их общий размер меньше гигабайта. Если размер файлов больше гигабайта, перейдите в `Tools` > `USB tools` > `SD Card`, подключите Switch к ПК через USB и сделайте резервную копию содержимого microSD карты на ПК, если вы еще не сделали это. Если вы не против скачать заново все игры и/или потерять другие (возможно важные) файлы, можете пропустить этот шаг.
 
-### **Instructions:**
+### **Инструкция:**
 
-1. Navigate to `Tools` > `Partition SD card`
-2. Set the `emuMMC (RAW)` slider to `29 FULL` in the middle of the bar.
-    - Set the `emuMMC (RAW)` slider to `58 FULL` if you're on an OLED Switch.
-    - If you wish to install Android and/or Linux later, partition your microSD card here accordingly by moving the sliders you see during this step. We recommend setting the `Android (USER)` and `Linux (EXT4)` sliders to at least 16GB.
-3. Navigate to `Next Step` at the bottom right, then select `Start` in the menu that appears.
-    - For Android; Select `Legacy` partitioning for Android 10/11 and `Dynamic` partitioning for Android 13+. Legacy and Dynamic partitioning are **NOT** intercompatible.
-4. From hekate's `Home` menu, navigate to `emuMMC` > `Create emuMMC` > `SD Partition` > `Part 1` and wait for Hekate to complete creating the emuMMC.
-5. Close the emuMMC creation menu by navigating to the `Close` button, then navigate to `Change emuMMC` > `SD RAW 1` and press the `Close` button twice in the top right to return to hekate's `Home` menu.
-6. Once done, go to `Tools` > `USB Tools` > `SD Card` and plug your Switch into your PC via USB.
-7. Continue with the next step of the guide.
-     - Your microSD card should now be accessible on your PC, if not, consult the warning message below.
+1. Перейдите в `Tools` > `Partition SD Card`.
+2. Установите ползунок `emuMMC (RAW)` на `29 FULL` в середине шкалы.
+    - Установите ползунок `emuMMC (RAW)` на `58 FULL`, если у вас OLED версия Switch.
+    - Если вы планируете устанавливать Android и/или Linux позже, разделите microSD карту соответствующим образом, двигая ползунки, которые вы видите в этом шаге. Мы рекомендуем установить ползунки `Android (USER)` и `Linux (EXT4)` минимум на 16 ГБ.
+3. Перейдите к `Next Step` в нижней части справа, затем выберите `Start` в появившемся меню.
+    - Для Android выберите `Legacy` для Android 10/11 и `Dynamic` для Android 13+. Legacy и Dynamic разделение **не совместимы** между собой.
+4. Из главного меню Hekate перейдите в `emuMMC` > `Create emuMMC` > `SD Partition` > `Part 1` и дождитесь, пока Hekate завершит создание emuMMC.
+5. Закройте меню создания emuMMC, перейдя к кнопке `Close`, затем выберите `Change emuMMC` > `SD RAW 1` и нажмите кнопку `Close` дважды в верхней части справа, чтобы вернуться в главное меню Hekate.
+6. После завершения перейдите в `Tools` > `USB Tools` > `SD карта` и подключите Switch к ПК через USB.
+7. Продолжите следующий шаг в руководстве.
+     - Ваша microSD карта теперь должна быть доступна на вашем ПК. Если нет, смотрите предупреждение ниже.
 
-!!! warning "Your microSD card is not showing up or Windows complaining about an unreadable drive"
-    If you get the issue that Windows says the microSD card is unreadable and wants to format it, do not format! This is likely your emuMMC partition. After partitioning your SD, your microSD will show up as 2 drives on your PC. Use the accessible drive.
-    If your microSD card isn't showing up at all, ensure that you're using a USB cable capable of data transfer and that, if you use Windows, Windows has assigned a drive letter to the FAT32 partition of your SD. If you still experience errors, join the <a href="https://discord.gg/C29hYvh" target="_blank">NH-Discord server</a> for support.
-
+!!! warning "Ваша microSD карта не отображается или Windows сообщает о нечитаемом диске"
+    Если Windows сообщает, что microSD карта нечитаема и предлагает отформатировать ее, не форматируйте! Это, вероятно, ваш раздел emuMMC. После разделения вашей SD карты, ваша microSD будет отображаться как два диска на вашем ПК. Используйте доступный диск.
+    Если ваша microSD карта не отображается вообще, убедитесь, что вы используете USB кабель, способный передавать данные, и что в Windows назначена буква диска для раздела FAT32 вашей SD карты. Если ошибка сохраняется, присоединяйтесь к <a href="https://t.me/UltraNX" target="_blank">группе Ultra-NX в Telegram</a> для получения помощи.
 
 ![hekate-partitioning-emu](img/hekate-partitioning-emu.png)
 
 &nbsp;
 
-[Continue to SD Preparations :material-arrow-right:](sd_preparation.md){ .md-button .md-button--primary }
+[Перейти к подготовке SD :material-arrow-right:](sd_preparation.md){ .md-button .md-button--primary }
