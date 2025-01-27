@@ -1,104 +1,105 @@
-### **CFW on sysMMC vs. CFW on emuMMC**
+### **CFW на sysMMC vs. CFW на emuMMC**
 
-A "CFW Environment" describes the context in which you are using custom firmware (CFW).
-As a reminder, custom firmware is never permanently installed, and runs independently on top of the system firmware. This means that you never have to commit to where you want to use custom firmware.
+"Среда CFW" описывает контекст, в котором вы используете кастомную прошивку (CFW).  
+Напомним, что кастомная прошивка никогда не устанавливается на постоянной основе и работает независимо поверх системной прошивки. Это значит, что вам не нужно окончательно решать, где использовать кастомную прошивку.
 
-Atmosphère temporarily patches HOS (HorizonOS, operating system of the switch) to enable customisations. You can choose what version of HOS it patches, each time you turn on your system. Each option has its own benefits and drawbacks.
+Atmosphère временно модифицирует HOS (HorizonOS, операционную систему Nintendo Switch), чтобы включить возможность настройки. Вы можете выбрать, какую версию HOS модифицировать, каждый раз при включении системы. У каждого варианта есть свои преимущества и недостатки.
 
- - For the purposes of this guide, the suffix -NAND and -MMC are interchangeable.
+- Для целей этого руководства суффиксы -NAND и -MMC взаимозаменяемы.
 
-Generally, `sys-` refers to the physical storage chip (sysMMC/eMMC) inside of your Switch. It stands for "system".
+Как правило, `sys-` относится к физическому чипу памяти (sysMMC/eMMC) внутри вашей консоли. Это означает "системный".
 
-Generally, `emu-` refers to a virtual version of the eMMC (internal storage), running from a microSD card. It stands for "emulated".
+Как правило, `emu-` относится к виртуальной версии eMMC (внутреннего хранилища), которая работает с карты microSD. Это означает "эмулированный".
 
-For more information on terminology, please refer to the [glossary](../../extras/glossary.md).
+Для получения дополнительной информации о терминологии обратитесь к [глоссарию](../../extras/glossary.md).
 
-**You get to decide!** Your choices are between using the internal storage or emulated storage. We will go over the advantages and disadvantages of either decision below.
+**Вы сами решаете!** У вас есть выбор между использованием внутреннего или эмулированного хранилища. Мы рассмотрим преимущества и недостатки каждого решения ниже.
+
 
 -----
 
 <div class="grid cards" markdown>
 
--   ### **emuMMC CFW (Recommended)**
-    #### **CFW on emuMMC has the following benefits:**
+-   ### **emuMMC CFW (Рекомендуется)**
+    #### **CFW на emuMMC имеет следующие преимущества:**
 
-    * No risk of bans as long as emuMMC remains offline from Nintendo [[info]](../../extras/img/ban.png)
-    * A safe area to test dangerous or risky mods and homebrew
-    * No chance of bricking and losing console-unique information while using CFW
+    * Отсутствие риска бана, если emuMMC остаётся офлайн от Nintendo [[info]](../../extras/img/ban.png)
+    * Безопасная среда для тестирования опасных или рискованных модов и homebrew
+    * Отсутствие риска "кирпича" и потери уникальной информации консоли при использовании CFW
 
-    #### **The following drawbacks:**
+    #### **Следующие недостатки:**
 
-    * Large microSD size requirement (32GB or 64GB will be reserved, depending on if you use a Switch OLED or not). If you want a *decent* experience, a minimum of 128GB is required (unless you are an advanced user and can resize the USER partition of your NAND)
-    * Slower console response times due to the limitation of your microSD card's classifications/specifications
-    * No official online play while in CFW
-    * More microSD card wear over time
-    * Doubled digital game storage requirements <link to dumping digital games>
+    * Требование большого объёма microSD (32GB или 64GB будет зарезервировано, в зависимости от использования Switch OLED или нет). Для *нормального* опыта минимально требуется 128GB (если вы не опытный пользователь, способный уменьшить размер USER-раздела NAND)
+    * Более низкая скорость отклика консоли из-за ограничений классификации/характеристик вашей microSD карты
+    * Нет официального онлайн-игры при использовании CFW
+    * Увеличенный износ microSD карты со временем
+    * Удвоенные требования к хранилищу для цифровых игр <link to dumping digital games>
 
-    #### **And the following considerations:**
-    No parity between sysMMC and emuMMC (Game installs, save data, and system settings will be separated when you boot between the two)
+    #### **И следующие соображения:**
+    Нет синхронизации между sysMMC и emuMMC (установки игр, сохранения данных и системные настройки будут раздельными при переключении между ними)
 
-    #### **In particular, here are just *some* popular use-cases for CFW on emuMMC:**
+    #### **Некоторые популярные сценарии использования CFW на emuMMC:**
 
-    * Restoring modified save data for any game
-    * Modding and cheating in any game
-    * Custom fonts and home menu theming
-    * Downgrading titles to base versions, without mandatory updates
-    * Enjoying CFW features such as custom sysmodules and homebrew apps
+    * Восстановление модифицированных сохранений для любой игры
+    * Моддинг и читы в играх
+    * Пользовательские шрифты и темы для домашнего меню
+    * Понижение версий игр до базовых без обязательных обновлений
+    * Использование функций CFW, таких как пользовательские системные модули и приложения homebrew
 
-    If you prefer foolproofing, and a separation between official features and custom features, you may consider using CFW on emuMMC. In this guide, emuMMC is assumed to be utilised for offline play.
+    Если вы предпочитаете надежность и разделение официальных и кастомных функций, стоит рассмотреть использование CFW на emuMMC. В этом руководстве предполагается использование emuMMC для оффлайн-игры.
 
-    !!! note "About this path"
-        This path of the guide ***also*** includes sysCFW as launch option.
-
-    -----
-
-    To proceed with CFW on **emuMMC**, click on the button below:
-
-    [Continue with the emuMMC path :material-arrow-right:](../all/partitioning_sd.md){ .md-button .md-button--primary }
-
--   ### **sysCFW (CFW on sysMMC)**
-    #### **CFW on sysMMC has the following benefits:**
-
-    * Parity of system settings, save data, and titles between CFW usage and standard usage (no need to duplicate digital games)
-    * Significantly lower microSD card storage requirements
-    * Possibility of online play during CFW use
-    * Fast console response time by not having to rely on the speed of your microSD card
-    * Longer microSD card lifespan
-
-
-    #### **The following drawbacks:**
-
-    * A brick risk for risky behaviors, especially for modchip users [[info]](#modchip-instability)
-    * A Nintendo server ban risk for misbehavior [[info]](https://nx.eiphax.tech/ban.html)
-    * No possibility of custom profile pictures (guaranteed ban)
-
-    #### **In particular, here are just *some* popular use-cases for sysCFW:**
-
-    * Enjoying CFW features such as custom sysmodules and homebrew apps
-    * Dumping eShop games, save data, and encryption keys for preservation or installation on emuMMC or external Switch emulators
-    * Restoring modified save data for many games
-    * Custom fonts and home menu theming
-    * Modifying and cheating in most offline games (and some online games; [[info]](../../homebrew/edizon.md))
-
-    If you prefer snappiness, online play, and a seamless transition between official features and custom features, you may consider using CFW on sysMMC. In this guide, sysMMC is assumed to be utilised for online play.
+    !!! note "О данном пути"
+        Этот путь руководства ***также*** включает sysCFW как вариант запуска.
 
     -----
 
-    To proceed with CFW on **sysMMC**, click on the button below:
+    Чтобы продолжить с CFW на **emuMMC**, нажмите кнопку ниже:
 
-    [Continue with the sysCFW path :material-arrow-right:](../all/partitioning_sd_syscfw.md){ .md-button .md-button--primary }
+    [Продолжить путь с emuMMC :material-arrow-right:](../all/partitioning_sd.md){ .md-button .md-button--primary }
+
+-   ### **sysCFW (CFW на sysMMC)**
+    #### **CFW на sysMMC имеет следующие преимущества:**
+
+    * Синхронизация системных настроек, данных сохранений и игр между CFW и стоком (нет необходимости дублировать цифровые игры)
+    * Значительно меньшие требования к хранилищу microSD
+    * Возможность онлайн-игры при использовании CFW
+    * Высокая скорость отклика консоли за счёт отсутствия зависимости от скорости microSD карты
+    * Более длительный срок службы microSD карты
+
+    #### **Следующие недостатки:**
+
+    * Риск "кирпича" при опасных действиях, особенно для пользователей модчипов [[info]](#modchip-instability)
+    * Риск бана от Nintendo за нарушение правил [[info]](https://nx.eiphax.tech/ban.html)
+    * Отсутствие возможности использовать кастомные аватары (гарантированный бан)
+
+    #### **Некоторые популярные сценарии использования sysCFW:**
+
+    * Использование функций CFW, таких как пользовательские системные модули и приложения homebrew
+    * Дампинг игр из eShop, данных сохранений и ключей шифрования для сохранения или установки на emuMMC или внешние эмуляторы Switch
+    * Восстановление модифицированных сохранений для множества игр
+    * Пользовательские шрифты и темы для домашнего меню
+    * Модификация и читы в большинстве оффлайн-игр (и некоторых онлайн-игр; [[info]](../../homebrew/edizon.md))
+
+    Если вы предпочитаете быстродействие, онлайн-игру и плавный переход между официальными и кастомными функциями, стоит рассмотреть использование CFW на sysMMC. В этом руководстве предполагается использование sysMMC для онлайн-игры.
+
+    -----
+
+    Чтобы продолжить с CFW на **sysMMC**, нажмите кнопку ниже:
+
+    [Продолжить путь с sysCFW :material-arrow-right:](../all/partitioning_sd_syscfw.md){ .md-button .md-button--primary }
 
 </div>
 
 -----
 
-##### Modchip Instability
-!!! danger "About Modchipped Switch console users"
-      Modchips directly infiltrate communication with the internal storage chip. Due to this, there are slight chances of NAND backups being tainted with corrupted data. If a bad backup is restored to sysNAND, the console can be bricked, and a modchip alone won't be able to fix it. To be safe, we recommend setting up an emuMMC on a console with a modchip, verify BOOT0/1 backups using tools like [NXNandManager (Windows)](https://github.com/eliboa/NxNandManager) or test NAND backups by running them as emuMMCs before you flash them to the sysNAND.
+##### Нестабильность модчипов
+!!! danger "О пользователях консоли с модчипами"
+      Модчипы напрямую вмешиваются в связь с внутренним чипом памяти. Из-за этого существует небольшая вероятность того, что резервные копии NAND будут содержать повреждённые данные. Если плохая резервная копия восстановлена на sysNAND, консоль может быть "окирпичена", и модчип не сможет её восстановить. Для безопасности мы рекомендуем настроить emuMMC на консоли с модчипом, проверить резервные копии BOOT0/1 с помощью таких инструментов, как [NXNandManager (Windows)](https://github.com/eliboa/NxNandManager), или протестировать резервные копии NAND, запустив их как emuMMC, прежде чем прошивать их в sysNAND.
 
-??? "Frequently Asked Questions about this page"
-      - **Q: Why is CFW referred to as being "never permanently installed"?** <br>
-                  A: Unless you have a modchip of any kind, turning the console off will disactivate the custom firmware. There is no current method for Atmosphère to install-to or permanently replace any part of the Nintendo Switch, so it will need to be triggered by an exploit every time you turn on the console. Atmosphère will then patch Horizon to bring you custom firmware features.
+??? "Часто задаваемые вопросы об этой странице"
+      - **В: Почему говорят что CFW "никогда не установленным на постоянной основе"?** <br>
+                  О: Если у вас нет модчипа, выключение консоли деактивирует кастомную прошивку. В настоящее время Atmosphère не может устанавливать или навсегда заменять любую часть Nintendo Switch, поэтому она должна запускаться через эксплойт каждый раз при включении консоли. Затем Atmosphère модифицирует Horizon OS для предоставления функций кастомной прошивки.
 
-      - **Q: Should I personally use sys/emuMMC?** <br>
-                  A: These questions are answered in detail within the webpage. Please make sure that you are fully reading the page before jumping here.
+      - **В: Мне стоит использовать sys/emuMMC?** <br>
+                  О: Эти вопросы подробно рассмотрены на странице. Пожалуйста, внимательно прочитайте её перед тем, как задавать этот вопрос.
+
