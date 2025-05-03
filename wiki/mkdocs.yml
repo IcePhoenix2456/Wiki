@@ -1,0 +1,17 @@
+site_name: My Docs
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+    - navigation.prune
+    - toc.follow
+    - navigation.top
+    - header.autohide
+    - search.suggest
+    - search.highlight
+  plugins:
+    - tags
+    - search
