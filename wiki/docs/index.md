@@ -7,10 +7,10 @@ hide:
 
 # Содержание 
 
-- **[Бэкапы и Эмунанд](https://github.com/Ultra-NX/Ultra/wiki/Backup-RU):**
+- **[Бэкапы и Эмунанд](backup&emuMMC.md):**
     - Раздел о создании/восстановлении бэкапов, а так же о создании/восстановлении эмунанда.
 
-- **[Установка и Обновление Ultra](https://github.com/Ultra-NX/Ultra/wiki/Installing-RU):**
+- **[Установка и Обновление Ultra](installing&update.md):**
     - Раздел содержащий разные способы установки и обновления Ultra.
 
 - **[Использование: Особенности и Разгон игр](https://github.com/Ultra-NX/Ultra/wiki/Usage-RU):**
