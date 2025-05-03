@@ -5,7 +5,6 @@ hide:
 
 # Создание бэкапа и эмунанда
 !!! note "Подготовка"
-
     Для всех последующих действий потребуется наличие Hekate на консоли. 
 
     1. Если у вас уже стоит Ultra или другая CFW - пропустите 3 и 4 пункты.
@@ -29,11 +28,11 @@ hide:
 1. Убедитесь, что на карте памяти есть свободное место для бэкапа (v1/v2/lite - 32gb, oled - 64gb).
 2. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 3. Перейдите на вкладку **Tools**.
-![](resources/Hekate-ToTools.jpg)
+![](../resources/Hekate-ToTools.jpg)
 4. Заходим в пункт **Backup eMMC**.
-![](resources/Hekate-Tools-ToBackup.jpg)
+![](../resources/Hekate-Tools-ToBackup.jpg)
 5. Делаем бэкапы **BOOT0 & BOOT1** и **RAW GPP** выбрав соответствующие пункты.
-![](resources/Hekate-Backup-Sysnand.jpg)
+![](../resources/Hekate-Backup-Sysnand.jpg)
 6. Бэкап сиснанда готов, не забудьте его перенести с карты памяти по пути `/backup` в безопасное место на компьютере.
    * Eсли вы не ставили игры во внутреннюю память сиснанда - бэкап будет отлично сжиматься при архивации.
 
@@ -44,12 +43,12 @@ hide:
 
 1. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 2. Перейдите на вкладку **Console Info**.
-![](resources/Hekate-ToConsoleInfo.jpg)
+![](../resources/Hekate-ToConsoleInfo.jpg)
 3. Выбираем пункт **Lockpick**.
-![](resources/Hekate-ConsoleInfo-Lockpick.jpg)
+![](../resources/Hekate-ConsoleInfo-Lockpick.jpg)
 4. Консоль загружается в пэйлоад LockpickRCM, в нем управляем кнопками Громкость **`+`** и Громкость **`–`**. Выбираем пункт **Dump from SysNAND**.
 
-    ![](resources/Lockpick1.jpg)
+    ![](../resources/Lockpick1.jpg)
 
 6. После снятия ключей нажатием на **Кнопку Питания** возвращаемся в главное меню, и выбираем **Reboot to hekate**.
 7. Бэкап ключей готов, не забудьте скопировать файл **prod.keys** с карты памяти из папки `switch` в безопасное место на компьютере.
@@ -61,11 +60,11 @@ hide:
 2. Поместите вашу папку бэкапа по пути `/backup`. Убедитесь, что файлы BOOT0, BOOT1 и rawnand.bin (Их может быть много) находятся по пути `/backup/"NAND id"/restore/`. В ином случае скопируйте все файлы из папки по пути `/backup/"NAND id"/` в папку `restore`.
 3. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 4. Перейдите на вкладку **Tools**.
-![](resources/Hekate-ToTools.jpg)
+![](../resources/Hekate-ToTools.jpg)
 5. Заходим в пункт **Restore eMMC**.
-![](resources/Hekate-Tools-Restore.jpg)
+![](../resources/Hekate-Tools-Restore.jpg)
 6. Восстанавливаем бэкапы **BOOT0 & BOOT1** и **RAW GPP** выбрав соответствующие пункты.
-![](resources/Hekate-Restore-Sysnand.jpg)
+![](../resources/Hekate-Restore-Sysnand.jpg)
 7. Проверьте работу сиснанда после восстановления.
 
 
@@ -87,24 +86,24 @@ hide:
 1. Убедитесь, что на карте памяти есть свободное место для создания Эмунанда.
 2. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 3. Перейдите на вкладку **Tools**.
-![](resources/Hekate-ToTools.jpg)
+![](../resources/Hekate-ToTools.jpg)
 4. Заходим в пункт **Partition SD Card**.
-![](resources/Hekate-Tools-SDPart.jpg)
+![](../resources/Hekate-Tools-SDPart.jpg)
 5. Ползунком **emuMMC (RAW)** выбираем желаемый размер будущего Эмунанда.
    * Минимульный размер 4гб, с которым вам останется всего ~1.3гб места под сохранения игр, что очень мало. Оптимальный размер 10гб, при котором остается 7гб+ свободного места под сохранения, чего вполне достаточно. Так же можно сделать Эмунанд классического размера (v1/v2/lite - 32gb, oled - 64gb).
-![](resources/Hekate-SDPart1.jpg)
+![](../resources/Hekate-SDPart1.jpg)
 6. Продолжаем выбирав пункт **Next Step**.
-![](resources/Hekate-SDPart2.jpg)
+![](../resources/Hekate-SDPart2.jpg)
 7. Подтверждаем создание нажав **Start**. Это форматирует вашу карту памяти.
-![](resources/Hekate-SDPart3.jpg)
+![](../resources/Hekate-SDPart3.jpg)
 8. После успешного форматирования карты памяти, выходим обратно на главное меню Hekate - на вкладку **Home**, после чего заходим в пункт **emuMMC**.
-![](resources/Hekate-ToEmuMMC.jpg)
+![](../resources/Hekate-ToEmuMMC.jpg)
 9. Выбираем пункт **Create emuMMC**.
-![](resources/Hekate-EmuMMC-Create.jpg)
+![](../resources/Hekate-EmuMMC-Create.jpg)
 10. Выбираем пункт **SD Partition**.
-![](resources/Hekate-EmuMMC-SDPart1.jpg)
+![](../resources/Hekate-EmuMMC-SDPart1.jpg)
 11. Выбираем **Part 1**.
-![](resources/Hekate-EmuMMC-SDPart2.jpg)
+![](../resources/Hekate-EmuMMC-SDPart2.jpg)
 12. После окончания нажмите **OK**. Вы создали Эмунанд на разделе.
 13. Не забывайте, что вы отформатировали карту памяти. Если на SD карте общий размер файлов был более 1 Гб, то вам надо заново распаковать ультру на карту памяти с заменой файлов.
 
@@ -117,11 +116,11 @@ hide:
 1. Убедитесь, что на карте памяти есть свободное место для создания Эмунанда. Требуемое место зависит от размера Сиснанда (v1/v2/lite - 32gb, oled - 64gb).
 2. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 3. Заходим в пункт **emuMMC**.
-![](resources/Hekate-ToEmuMMC.jpg)
+![](../resources/Hekate-ToEmuMMC.jpg)
 4. Выбираем пункт **Create emuMMC**.
-![](resources/Hekate-EmuMMC-Create.jpg)
+![](../resources/Hekate-EmuMMC-Create.jpg)
 5. Выбираем пункт **SD File**.
-![](resources/Hekate-EmuMMC-SDFile.jpg)
+![](../resources/Hekate-EmuMMC-SDFile.jpg)
 6. После окончания нажмите **OK**. Вы создали Файловый Эмунанд.
 
 
@@ -138,13 +137,13 @@ hide:
 1. Убедитесь, что на карте памяти есть свободное место для бэкапа. Требуемое место зависит от размера Эмунанда, если вы не редактировали размер при создании, то для v1/v2/lite - 32gb, для oled - 64gb.
 2. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 3. Перейдите на вкладку **Tools**.
-![](resources/Hekate-ToTools.jpg)
+![](../resources/Hekate-ToTools.jpg)
 4. Заходим в пункт **Backup eMMC**.
-![](resources/Hekate-Tools-ToBackup.jpg)
+![](../resources/Hekate-Tools-ToBackup.jpg)
 5. Переключаем слот бэкапа на эмунанд нажав на пункт **SD emuMMC Raw Partition**.
-![](resources/Hekate-Backup-ToEmunand.jpg)
+![](../resources/Hekate-Backup-ToEmunand.jpg)
 6. Делаем бэкапы **BOOT0 & BOOT1** и **RAW GPP** выбрав соответствующие пункты.
-![](resources/Hekate-Backup-Emunand.jpg)
+![](../resources/Hekate-Backup-Emunand.jpg)
 7. Бэкап эмунанда готов, не забудьте его перенести с карты памяти по пути */backup* в безопасное место на компьютере.
 
 
@@ -165,13 +164,13 @@ hide:
 2. Поместите вашу папку бэкапа по пути `/backup`. Убедитесь, что файлы BOOT0, BOOT1 и rawnand.bin (Их может быть много) находятся по пути `/backup/"NAND id"/restore/emummc/`.
 3. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 4. Перейдите на вкладку **Tools**.
-![](resources/Hekate-ToTools.jpg)
+![](../resources/Hekate-ToTools.jpg)
 5. Заходим в пункт **Restore eMMC**.
-![](resources/Hekate-Tools-Restore.jpg)
+![](../resources/Hekate-Tools-Restore.jpg)
 6. Переключаем слот восстановления на эмунанд нажав на пункт **SD emuMMC Raw Partition**.
-![](resources/Hekate-Restore-ToEmunand.jpg)
+![](../resources/Hekate-Restore-ToEmunand.jpg)
 7. Восстанавливаем бэкапы **BOOT0 & BOOT1** и **RAW GPP** выбрав соответствующие пункты.
-![](resources/Hekate-Restore-Emunand.jpg)
+![](../resources/Hekate-Restore-Emunand.jpg)
 8. Проверьте работу эмунанда после восстановления.
 
 
