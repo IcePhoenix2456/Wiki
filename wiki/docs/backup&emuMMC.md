@@ -61,7 +61,7 @@ hide:
 2. Поместите вашу папку бэкапа по пути `/backup`. Убедитесь, что файлы BOOT0, BOOT1 и rawnand.bin (Их может быть много) находятся по пути `/backup/"NAND id"/restore/`. В ином случае скопируйте все файлы из папки по пути `/backup/"NAND id"/` в папку `restore`.
 3. Зайдите в Hekate(нажав кнопку громкости **`-`** при включении консоли).
 4. Перейдите на вкладку **Tools**.
-![](wiki/resources/Hekate-ToTools.jpg)
+![](resources/Hekate-ToTools.jpg)
 5. Заходим в пункт **Restore eMMC**.
 ![](resources/Hekate-Tools-Restore.jpg)
 6. Восстанавливаем бэкапы **BOOT0 & BOOT1** и **RAW GPP** выбрав соответствующие пункты.

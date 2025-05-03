@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: UltraNX-Wiki
 theme:
   name: material
   language: ru
@@ -12,6 +12,17 @@ theme:
     - header.autohide
     - search.suggest
     - search.highlight
+    - navigation.tabs
+  palette:
+    - media: "(prefers-color-scheme)"
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+nav:
+    - Главная: index.md
+    - Установка и обновление Ultra-NX: installing&update.md
+    - Создание бэкапов и эмунанда: backup&emuMMC.md
 markdown_extensions:
   - admonition
   - pymdownx.details
