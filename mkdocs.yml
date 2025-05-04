@@ -1,4 +1,5 @@
 site_name: UltraNX-Wiki
+site_url: https://github.com/IcePhoenix2456/Ultra_wiki
 theme:
   name: material
   language: ru
