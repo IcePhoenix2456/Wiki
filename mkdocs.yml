@@ -4,7 +4,6 @@ theme:
   name: material
   language: ru
   features:
-    - navigation.instant.progress
     - navigation.instant
     - navigation.tracking
     - navigation.path
@@ -20,6 +19,9 @@ theme:
       scheme: default
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+nav:
+  - Ultra Wiki: index.md
+  - Полезные статьи: useful_guides/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details
