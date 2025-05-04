@@ -7,7 +7,7 @@ hide:
 ## Извлечение сохранений с повреждённого Эмунанда
 
 1. Скачиваем на компьютер [**NxNandManager**](https://github.com/eliboa/NxNandManager/releases/latest)
-2. [Делаем дамп ключей](../ultra_wiki/backup&emuMMC.md/#_3) с вашего эмунанда. Точно также как для сиснанда только выбрать необходимо 2 строчку **dump from EmuMMC.**
+2. [Делаем дамп ключей](../ultra_wiki/backup_emuMMC.md/#_3) с вашего эмунанда. Точно также как для сиснанда только выбрать необходимо 2 строчку **dump from EmuMMC.**
 3. Находясь в hekate извлекаете карту памяти и подключаете к ПК, либо через hekate подключаете к компьютеру: **Tools -> USB Tools -> SD Card.**
 4.  Запускаем NxNandManager, открываем вкладку **Options -> Configure Keyset.**
 ![](res/saves_corrupted_emuMMC/keyset.png)

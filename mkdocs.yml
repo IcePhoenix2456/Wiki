@@ -13,7 +13,6 @@ theme:
     - navigation.top
     - header.autohide
     - search.suggest
-    - search.highlight
     - navigation.tabs
   palette:
     - media: "(prefers-color-scheme)"
@@ -38,3 +37,6 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+  - markdown.extensions.toc:
+      slugify: !!python/name:slugify.slugify
+      permalink: true
