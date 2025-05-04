@@ -26,5 +26,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: pip install unicode
+      - run: pip install unidecode
       - run: mkdocs gh-deploy --force
