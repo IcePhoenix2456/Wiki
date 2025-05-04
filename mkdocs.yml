@@ -1,9 +1,11 @@
 site_name: UltraNX-Wiki
+site_url: https://icephoenix2456.github.io/Ultra_wiki/
 theme:
   name: material
   language: ru
   features:
     - navigation.instant.progress
+    - navigation.instant
     - navigation.tracking
     - navigation.path
     - navigation.prune
