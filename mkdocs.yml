@@ -19,13 +19,6 @@ theme:
       scheme: default
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-nav:
-    - Главная: index.md
-    - Установка и обновление Ultra-NX: GitHub_Wiki/installing&update.md
-    - Создание бэкапов и эмунанда: GitHub_Wiki/backup&emuMMC.md
-    - "Использование: Особенности и Разгон": GitHub_Wiki/usage.md
-    - Ultra Tuner: GitHub_Wiki/tuner.md
-    - Ответы на вопросы: GitHub_Wiki/faq.md
 markdown_extensions:
   - admonition
   - pymdownx.details
