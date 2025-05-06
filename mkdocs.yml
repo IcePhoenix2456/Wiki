@@ -42,3 +42,5 @@ markdown_extensions:
   - markdown.extensions.toc:
       slugify: !!python/name:slugify.slugify
       permalink: true
+extra:
+  custom_domain: wiki.icephoenix.ru
