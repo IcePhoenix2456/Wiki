@@ -10,4 +10,5 @@ hide:
 - **[Восстановление сохранений с повреждённого Эмунанда](saves_corrupted_emuMMC.md)**
 - **[Очистка Сиснанда от следов неофициально установленых программ с помощью Tegra Explorer](sysnand_wipe.md)**
 - **[Переход на другую карту памяти](new_sd.md)**
-- **[Привязка NNID к аккаунту с помощью Linkalho](linkalho_nnid.md)**
+- **[Привязка акканута Nintendo к профилю с помощью Linkalho](linkalho_nnid.md)**
+- **[Установка игр через dbibackend](dbibackend.md)**
