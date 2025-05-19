@@ -22,14 +22,15 @@ hide:
 
 #### Установка библиотеки pyusb
 1. Запускаем Powershell и вводим команду `pip install pyusb` и ждем завершения установки, затем закрываем.
-![PowerShell pyusb](res/dbibackend/ps_pyusb.bmp)
+
+    ![PowerShell pyusb](res/dbibackend/ps_pyusb.bmp)
 
 #### Установка драйвера libusbK
 1. Скачиваем Zadig с [официального сайта](https://zadig.akeo.ie/) и запускаем.
 2. Подключаем консоль по кабелю к ПК, заходим в DBI и нажимаем Y.
 3. В окне Zadig определится устройство DBI, необходимо выбрать драйвер `libusbK (v.3.1.0.0)`, затем нажать **Install Driver** и дождаться окончания установки. Если драйвер успешно установлен в DBI появится сообщение **"Ожидается запуск dbibackend..."**
 
-![Zadig](res/dbibackend/zadig.bmp)
+    ![Zadig](res/dbibackend/zadig.bmp)
 
 ### Инструкция для MacOS
 
