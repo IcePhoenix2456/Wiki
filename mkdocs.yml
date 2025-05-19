@@ -13,6 +13,7 @@ theme:
     - header.autohide
     - search.suggest
     - navigation.tabs
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme)"
     - media: "(prefers-color-scheme: light)"
