@@ -29,7 +29,6 @@ theme:
 plugins:
   - offline
   - social
-  - search
 markdown_extensions:
   - admonition
   - pymdownx.details
