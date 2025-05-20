@@ -27,7 +27,6 @@ theme:
     - navigation.path
     - content.code.copy
 plugins:
-  - optimize
   - offline
   - social
   - search
