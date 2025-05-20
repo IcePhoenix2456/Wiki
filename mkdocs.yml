@@ -26,6 +26,7 @@ theme:
     - navigation.top
     - navigation.path
     - content.code.copy
+    - content.social.cards
   plugins:
     - optimize
     - offline
