@@ -26,11 +26,11 @@ theme:
     - navigation.top
     - navigation.path
     - content.code.copy
-  plugins:
-    - optimize
-    - offline
-    - social
-    - search
+plugins:
+  - optimize
+  - offline
+  - social
+  - search
 markdown_extensions:
   - admonition
   - pymdownx.details
