@@ -27,9 +27,11 @@ theme:
     - navigation.path
     - content.code.copy
 plugins:
-  - offline
   - search
-  - social
+  - social:
+      cards_layout_options:
+        color: white
+        font_family: Roboto
 markdown_extensions:
   - admonition
   - pymdownx.details
