@@ -30,8 +30,7 @@ plugins:
   - search
   - social:
       cards_layout_options:
-        background_color: white
-        font_family: Roboto
+        background_color: "#ffffff"
 markdown_extensions:
   - admonition
   - pymdownx.details
