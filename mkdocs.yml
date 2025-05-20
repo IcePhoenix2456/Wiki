@@ -1,47 +1,46 @@
-site_name: Wiki
+site_name: Switch Wiki
 site_url: https://wiki.icephoenix.ru
+repo_url: https://github.com/Ultra-NX/UltraNX
+repo_name: Ultra-NX
+nav:
+  - Ultra Wiki: index.md
+  - Полезные гайды: useful_guides/index.md
 theme:
   name: material
   language: ru
-  features:
-    - navigation.instant
-    - navigation.tracking
-    - navigation.path
-    - navigation.prune
-    - toc.follow
-    - navigation.top
-    - header.autohide
-    - search.suggest
-    - navigation.tabs
-    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
   palette:
     - media: "(prefers-color-scheme)"
     - media: "(prefers-color-scheme: light)"
       scheme: default
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-nav:
-  - Ultra Wiki: index.md
-  - Полезные статьи: useful_guides/index.md
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.prune
+    - toc.follow
+    - navigation.top
+    - navigation.path
+    - content.code.copy
+  plugins:
+    - optimize
+    - offline
+    - social
+    - search
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - def_list
   - attr_list
-  - md_in_html
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tasklist:
-      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
-  - toc:
-      permalink: true
-      toc_depth: 3
   - markdown.extensions.toc:
       slugify: !!python/name:slugify.slugify
       permalink: true
-extra:
-  custom_domain: wiki.icephoenix.ru
+  - toc:
+      permalink: true
+      toc_depth: 3
