@@ -30,7 +30,7 @@ plugins:
   - search
   - social:
       cards_layout_options:
-        background_color: "#ffffff"
+        background_color: white
         font_family: Roboto
 markdown_extensions:
   - admonition
