@@ -28,9 +28,7 @@ theme:
     - content.code.copy
 plugins:
   - search
-  - social:
-      cards_layout_options:
-        background_color: "#ffffff"
+  - social
 markdown_extensions:
   - admonition
   - pymdownx.details
