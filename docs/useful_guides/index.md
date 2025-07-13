@@ -14,3 +14,4 @@ hide:
 - **[Установка игр через dbibackend](dbibackend.md)**
 - **[Обновление и откат HOS](hos_update.md)**
 - **[Решение проблем с подключением к Wi-Fi](wifi_problem.md)**
+- **[Журнал активности DBI](dbi_activity_log.md)**
