@@ -67,7 +67,7 @@ hide:
 
     ![restore](res/wifi_problem/restore_prodinfo.png)
 
-15. Закройте NxNandManager и безопасно извлеките консоль. Если это не получается сделать привычным методом, то откройте "Устройства и принтер", найдите ваше устройство и удалите его.
+15. Закройте NxNandManager и отключите консоль от вашего компьютера.
 
     ![delete_device](res/wifi_problem/disconnect.png)
 
