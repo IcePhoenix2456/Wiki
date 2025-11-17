@@ -5,6 +5,7 @@ repo_name: Ultra-NX
 nav:
   - Ultra Wiki: index.md
   - Полезные гайды: useful_guides/index.md
+  - База: base/index.md
   - О проекте: about.md
 theme:
   name: material
