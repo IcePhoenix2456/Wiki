@@ -2,45 +2,28 @@
 hide:
   - navigation
 ---
-# Обновление и откат HOS
+# Обновление HOS
 
 !!! question "Что такое HOS?"
      HOS расшифровывается как Horizon Operating System — это операционная система, на базе которой работает консоль Nintendo Switch.
 
 ## Обновление HOS
 
-### Загрузка файлов обновления
+!!! warning "Предупреждение"
+    Перед обновлением HOS убедитесь, что установленная версия сборки поддерживает HOS, на которую вы хотите обновиться. Поддерживаемую версию HOS вы можете посмотреть на главной странице [notUltraNX](https://github.com/Ultra-NX/UltraNX).
 
-1. Запустите [**Homebrew menu**] (Зажав R зайти в игру/альбом), затем откройте **All in One Updater**.
-2. В разделе **Загрузить прошивку** выберите и загрузите версию прошивки на которую вы будете обновлять консоль. Желательно загружать rebootless версию прошивки, так как она новее(в ней есть изменения, которые не требовали перезагрузки консоли при обновлении).
-![aio_download](res/hos_update/aio_download.jpg)
+1. Откройте DBI при помощи **Sphaira**(R+альбом или игра) или ярлыка, если он у вас создан
+![DBI](res/hos_update/DBI_main.jpg)
+2. Перейдите в **notUltraNX** и откройте раздел **Прошивки (HOS)**
+![firmware](res/hos_update/notUltraNX_firmware.jpg)
+3. Выберите версию HOS, которая вас интересует
+![HOS_select](res/hos_update/HOS_select.jpg)
+4. Согласитесь на загрузку
+![HOS_download](res/hos_update/HOS_download.jpg)
+5. Подтвердите установку
+![HOS_install](res/hos_update/HOS_install.jpg)
+6. Выберите Reboot
+![reboot](res/hos_update/reboot.jpg)
 
-!!! note "Отсутствие необходимой версии HOS"
-    В AIO может не быть необходимой вам версии HOS. В этом случае вы можете скачать HOS с [GitHub репозитория](https://github.com/THZoria/NX_Firmware). После загрузки создайте на карте памяти папку, например firmware и распакуйте скачанную HOS в эту папку.
-
-### Установка обновления
-
-1. Запустите [**Homebrew menu**] (Зажав R зайти в игру/альбом), затем откройте **Daybreak**.
-2. Следуйте примеру ниже, выбирая пункты, выделенные синим цветом.
-![daybreak_entry](res/hos_update/daybreak_entry.jpg)
-![choose_folder](res/hos_update/choose_folder.jpg)
-![up_1](res/hos_update/up_1.jpg)
-![up_2](res/hos_update/up_2.jpg)
-![up_3](res/hos_update/up_3.jpg)
-![up_4](res/hos_update/up_4.jpg)
-
-## Откат HOS
-
-!!! warning "Сброс до заводских настроек"
-     При откате с 20 HOS необходимо выбрать сброс до заводских настроек в Daybreak, во избежании ошибок после отката. Это приведет к потере всех пользовательских данных. Вы можете предварительно сделать бэкап сохранений в DBI и [бэкап своего профиля в Linkalho](../useful_guides/linkalho_nnid.md), чтобы восстановить их после отката. Все установленные игры к сожалению будут утеряны.
-
-1. Убедитесь что вы используете версию Ultra NX не ниже 2.4|R2x, или [обновите ее через All in One Updater](../ultra_wiki/installing_update.md#obnovlenie-cherez-aio).
-2. Загрузите через All in One Updater файлы прошивки, на которую вы будете делать откат.
-3. Запустите [**Homebrew menu**] (Зажав R зайти в игру/альбом), затем откройте **Daybreak**.
-4. Следуйте примеру ниже, выбирая пункты, выделенные синим цветом.
-![daybreak_entry](res/hos_update/daybreak_entry.jpg)
-![choose_folder](res/hos_update/choose_folder.jpg)
-![down_1](res/hos_update/down_1.jpg)
-![down_2](res/hos_update/down_2.jpg)
-![down_3](res/hos_update/down_3.jpg)
-![down_4](res/hos_update/down_4.jpg)
+!!! note "Обновление HOS на Сиснанде"
+    Если вы хотите обновить HOS на Сиснанде для лицензионных игры, то рекомендуется это делать таким же способом(в четвёртом шаге выбирайте самую новую версию HOS), как в Эмунанде, загрузившись через Semi-Stock. Были сообщения от пользователей с чипами HWFLY, что обновление официальным способом убивает Сиснанд. Если у вас консоль с другим чипом, то всё равно рекомендуется обновиться через Semi-Stock, чтобы избежать возможных проблем.

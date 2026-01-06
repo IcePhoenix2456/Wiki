@@ -12,5 +12,5 @@ hide:
 - **[Переход на другую карту памяти](new_sd.md)**
 - **[Привязка акканута Nintendo к профилю с помощью Linkalho](linkalho_nnid.md)**
 - **[Установка игр через dbibackend](dbibackend.md)**
-- **[Обновление и откат HOS](hos_update.md)**
+- **[Обновление HOS](hos_update.md)**
 - **[Решение проблем с подключением к Wi-Fi](wifi_problem.md)**
