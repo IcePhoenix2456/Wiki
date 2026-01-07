@@ -50,3 +50,5 @@ plugins:
 extra:
   version:
     method: uri
+extra_css:
+  - stylesheets/extra.css?v=20260107
