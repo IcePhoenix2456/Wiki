@@ -47,6 +47,9 @@ plugins:
   - offline
   - glightbox
   - search
+  - minify:
+      minify_html: true
+      cache_safe: true
 extra:
   version:
     method: uri
